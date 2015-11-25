@@ -1,7 +1,11 @@
 "use strict"
 
 module.exports = function(robot){
-  robot.respond(/animate me (.+)/i, function(msg){
-    msg.send("No.");
+  robot.respond(/ship it (.+)/i, function(msg){
+    msg.send("ship it");
   });
+
+
+
+
 }
