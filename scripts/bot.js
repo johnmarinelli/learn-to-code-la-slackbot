@@ -2,7 +2,10 @@
 var sandbox = require('sandbox');
 
 module.exports = function(robot){
-  
+
+  /* JS interpreter in slack */
+  // example: call var a = 1; a + 2;
+  // (will print "3" to slack)  
   // this line says that bot will respond to anyone that writes 'call ___'
   robot.respond(/call (.+)/i, function(msg) {
     // grab the second part of the message; e.g, the user's code
