@@ -2,7 +2,6 @@
 var sandbox = require('sandbox');
 
 module.exports = function(robot){
-  // objective: an in-slack javascript interpreter
   
   // this line says that bot will respond to anyone that writes 'call ___'
   robot.respond(/call (.+)/i, function(msg) {
@@ -16,6 +15,13 @@ module.exports = function(robot){
     s.run(code, function(out) {
       // send the output to slack
       msg.send(out.result);
-    });
+    })
   });
+
+
+  // build off of this template
+  robot.respond(/YOUR_COMMAND (.+)/i, function(msg) {
+    // to send messages to slack: msg.send('lolsup')
+    // to retrieve user input: var in = msg.match[1]
+  })
 }
